@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Assistant', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+// LAYOUT BREAKPOINTS
+
+$break-narrow: 500px;
+$break-medium: 605px;
+$break-normal: 850px;
+$break-wide: 1100px;
+$break-very-wide: 1400px;
+
+/* Media queries Breakpoint mixins */
+
+@mixin for-narrow-layout {
+    @media (max-width: $break-narrow) {
+      @content;
+    }
+  }
+  
+  @mixin for-normal-layout {
+    @media (max-width: $break-normal) {
+      @content;
+    }
+  }
+  @mixin for-medium-layout {
+    @media (max-width: $break-medium) {
+      @content;
+    }
+  }
+  
+  @mixin for-wide-layout {
+    @media (max-width: $break-wide) {
+      @content;
+    }
+  }
+  @mixin for-very-wide-layout {
+    @media (min-width: $break-very-wide) {
+      @content;
+    }
+  }

@@ -1,0 +1,51 @@
+@import "../../App.scss";
+
+.film-details {
+  width: 70%;
+  border: 1px solid rgb(236, 236, 236);
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: 300;
+
+  @include for-medium-layout {
+    width: 75%;
+  }
+
+  p {
+    margin-left: 10px;
+    color: #000000;
+    line-height: 1.6;
+    padding: 10px;
+
+    @include for-medium-layout {
+      font-size: 0.9rem;
+    }
+  }
+
+  .header {
+    background-color: rgb(243, 243, 243);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 10px;
+
+    @include for-medium-layout {
+      font-size: 1.2rem;
+    }
+  }
+
+  .fa-star {
+    color: rgb(231, 209, 10);
+    cursor: pointer;
+  }
+}
