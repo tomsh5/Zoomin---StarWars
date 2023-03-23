@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Home.scss";
+import Loader from "../assets/Spinner-2.gif";
 import { filmService } from "../services/film-service.js";
 import FilmList from "../components/FilmList/FilmList";
 import FilmDetails from "../components/FilmDetails/FilmDetails";
@@ -25,8 +26,14 @@ function Home() {
 
   return (
     <div className="home-page">
-      {films && <FilmList films={films} onFilmClick={onFilmClick} />}
-      {activeFilm && <FilmDetails film={activeFilm} />}
+      {films ? (
+        <div className="main-container">
+          {films && <FilmList films={films} onFilmClick={onFilmClick} />}
+          {activeFilm && <FilmDetails film={activeFilm} />}
+        </div>
+      ) : (
+        <img src={Loader} alt="loading..." />
+      )}
     </div>
   );
 }
